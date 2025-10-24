@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherWise - Your Personal Weather Companion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-cloud-sun-rain"></i>
+                <span>WeatherWise</span>
+            </div>
+            <p class="tagline">Your Personal Weather Companion</p>
+        </header>
+        
+        <div class="search-container">
+            <input type="text" id="city-input" placeholder="Search for a city...">
+            <button id="search-btn">
+                <i class="fas fa-search"></i> Search
+            </button>
+        </div>
+        
+        <div class="error" id="error-message">
+            <i class="fas fa-exclamation-triangle"></i> City not found. Please try again.
+        </div>
+        
+        <div class="loading" id="loading-indicator">
+            <i class="fas fa-spinner fa-spin"></i> Loading weather data...
+        </div>
+        
+        <div class="main-content" id="main-content">
+            <div class="current-weather">
+                <div class="location-info">
+                    <h2 id="city-name">New York, USA</h2>
+                    <div class="date" id="current-date">Wednesday, 24 October</div>
+                    <div class="weather-main">
+                        <div class="temperature" id="temperature">18°C</div>
+                        <div class="weather-icon" id="weather-icon">
+                            <i class="fas fa-cloud-sun"></i>
+                        </div>
+                    </div>
+                    <div class="weather-description" id="weather-description">Partly Cloudy</div>
+                </div>
+                
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <i class="fas fa-tint"></i>
+                        <div class="detail-info">
+                            <div class="detail-value" id="humidity">65%</div>
+                            <div class="detail-label">Humidity</div>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-wind"></i>
+                        <div class="detail-info">
+                            <div class="detail-value" id="wind-speed">12 km/h</div>
+                            <div class="detail-label">Wind Speed</div>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-temperature-low"></i>
+                        <div class="detail-info">
+                            <div class="detail-value" id="feels-like">16°C</div>
+                            <div class="detail-label">Feels Like</div>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-compress-alt"></i>
+                        <div class="detail-info">
+                            <div class="detail-value" id="pressure">102.9 hPa</div>
+                            <div class="detail-label">Pressure</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="forecast">
+                <h2 class="section-title">
+                    <i class="fas fa-calendar-alt"></i> 5-Day Forecast
+                </h2>
+                <div class="forecast-container" id="forecast-container">
+                    <!-- Forecast days will be inserted here by JavaScript -->
+                </div>
+            </div>
+            
+            <div class="additional-info">
+                <div class="hourly-forecast">
+                    <h2 class="section-title">
+                        <i class="fas fa-clock"></i> 24-Hour Forecast
+                    </h2>
+                    <div class="hourly-container" id="hourly-container">
+                        <!-- Hourly forecast will be inserted here by JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="air-quality">
+                    <h2 class="section-title">
+                        <i class="fas fa-wind"></i> Air Quality
+                    </h2>
+                    <div class="aqi-container">
+                        <div class="aqi-value aqi-good" id="aqi">42</div>
+                        <div class="aqi-text" id="aqi-text">Good</div>
+                        <div class="detail-label">Air Quality Index</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Powered by OpenWeather API | WeatherWise App vrinda© 2025</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
